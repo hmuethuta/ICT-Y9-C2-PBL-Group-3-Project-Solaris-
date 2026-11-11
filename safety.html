@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore heat-wave news, practical advice, and ways to help protect people from extreme heat.">
+    <title>Staying Safe</title>
+    <link href="bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="media/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="top-header" id="topHeader">
+        <div class="shell header-row">
+            <a href="index.html" class="brand-link">
+                <img src="media/logo.png" alt="Project Solaris logo" width="50" height="50">
+                    <span class="brand-name">Project <span class="accent">Solaris</span></span>
+                    <span class="brand-tag">Heat Safety</span>
+                </span>
+            </a>
+
+            <nav class="main-nav">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="about.html">About Us</a>
+                <a class="nav-link" href="information.html">Information</a>
+                <a class="nav-link active" href="safety.html">Staying Safe</a>
+            </nav>
+
+            <div class="header-actions">
+                <button type="button" class="btn-login" id="loginButton"
+                    data-bs-toggle="modal" data-bs-target="#loginModal">
+                    Log In
+                </button>
+                <button type="button" class="btn btn-danger" id="createAccountButton"
+                    data-bs-toggle="modal" data-bs-target="#registerModal">
+                    Create Account
+                </button>
+
+                <!-- Shown instead of the two buttons above when logged in -->
+                <div class="dropdown account-menu" id="accountMenu" hidden>
+                    <button type="button" class="account-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false" aria-label="Your account">
+                        <span class="account-avatar" id="accountAvatar"></span>
+                        <span class="account-name" id="accountName"></span>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-end account-dropdown">
+                        <div class="account-info">
+                            <strong id="accountFull"></strong>
+                            <small id="accountEmail"></small>
+                            <small id="accountQuiz"></small>
+                        </div>
+                        <hr class="dropdown-divider">
+                        <button type="button" class="dropdown-item" id="logoutButton">
+                            <i class="bi bi-box-arrow-right"></i> Log out
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container py-5">
+
+    <!-- Introduction -->
+    <section class="text-center mx-auto mb-5" style="max-width: 900px;">
+        <p class="eyebrow">Protect yourself and others</p>
+        <h2 class="accent mb-3">Heat Safety & Preparedness</h2>
+
+        <img src="media/orange man dying.png" alt="Heatwave illustration" class="img-fluid mb-4" width="1000px" height="auto" style="border-radius: 20px;">
+
+        <p class="lead">
+            Preparing for extreme heat can reduce the risk of dehydration, heat exhaustion and other heat-related illnesses.
+        </p>
+
+        <p>
+            Knowing what to do before, during and after a heatwave helps you protect yourself, your family and your community.
+            Explore our three-stage safety guide to learn how to prepare for extreme temperatures and respond to dangerous conditions.
+        </p>
+    </section>
+
+    <hr class="section-divider my-5">
+
+    <!-- Three-Stage Safety Guide -->
+    <section class="mb-5" id="safety">
+        <div class="text-center mb-4">
+            <p class="eyebrow">Your heat safety checklist</p>
+            <h3 class="accent">The Three Stages of Heat Preparedness</h3>
+            <p class="mx-auto" style="max-width: 700px;">
+                Heat safety involves preparation, protection and recovery.
+                Each stage plays an important role in reducing the effects of extreme temperatures.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Before Heatwave -->
+            <div class="col-md-4">
+                <div class="safety-card bg-yellow-warn shadow h-100 p-4">
+                    <div class="text-center mb-3">
+                        <i class="bi bi-calendar-check fs-1 text-dark"></i>
+                        <h4 class="mt-2">Before a Heatwave</h4>
+                        <p class="small text-dark">PREPARE</p>
+                    </div>
+
+                    <ul class="text-dark">
+                        <li class="mb-3">
+                            Check weather forecasts and heat warnings regularly.
+                        </li>
+                        <li class="mb-3">
+                            Prepare drinking water and keep enough supplies available.
+                        </li>
+                        <li class="mb-3">
+                            Install or check fans and air-conditioning equipment.
+                        </li>
+                        <li class="mb-3">
+                            Cover sun-facing windows with curtains, blinds or reflective coverings.
+                        </li>
+                        <li class="mb-3">
+                            Identify nearby air-conditioned public buildings or cooling centers.
+                        </li>
+                        <li>
+                            Make a plan to check on older adults, young children and vulnerable neighbours.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- During Heatwave -->
+            <div class="col-md-4">
+                <div class="safety-card bg-orange-warn shadow h-100 p-4">
+                    <div class="text-center mb-3">
+                        <i class="bi bi-thermometer-sun fs-1 text-dark"></i>
+                        <h4 class="mt-2">During a Heatwave</h4>
+                        <p class="small text-dark">PROTECT</p>
+                    </div>
+
+                    <ul class="text-dark">
+                        <li class="mb-3">
+                            Drink water regularly throughout the day instead of waiting until you feel thirsty.
+                        </li>
+                        <li class="mb-3">
+                            Stay in shaded, cool or air-conditioned places whenever possible.
+                        </li>
+                        <li class="mb-3">
+                            Avoid strenuous outdoor activities during the hottest hours.
+                        </li>
+                        <li class="mb-3">
+                            Wear loose-fitting, lightweight and light-coloured clothing.
+                        </li>
+                        <li class="mb-3">
+                            Take cool showers or use damp cloths to help lower your body temperature.
+                        </li>
+                        <li class="mb-3">
+                            Never leave children, vulnerable people or pets inside parked vehicles.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- After Heatwave -->
+            <div class="col-md-4">
+                <div class="safety-card bg-red-warn shadow h-100 p-4">
+                    <div class="text-center mb-3">
+                        <i class="bi bi-house-check fs-1 text-dark"></i>
+                        <h4 class="mt-2">After a Heatwave</h4>
+                        <p class="small text-dark">RECOVER</p>
+                    </div>
+
+                    <ul class="text-dark">
+                        <li class="mb-3">
+                            Continue drinking enough water while recovering from the heat.
+                        </li>
+                        <li class="mb-3">
+                            Check on family members, friends and vulnerable neighbours.
+                        </li>
+                        <li class="mb-3">
+                            Allow your body to recover and avoid immediately returning to strenuous activities.
+                        </li>
+                        <li class="mb-3">
+                            Open windows when the outside air is cooler than the indoor temperature.
+                        </li>
+                        <li class="mb-3">
+                            Replace used emergency supplies and replenish drinking water.
+                        </li>
+                        <li>
+                            Monitor local weather reports for further heat warnings.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <hr class="section-divider my-5">
+
+    <!-- Heat-Related Illness Warning -->
+    <section class="mb-5 mx-auto" style="max-width: 900px;">
+        <div class="text-center mb-4">
+            <p class="eyebrow">Recognise the warning signs</p>
+            <h3 class="accent mb-3">Know the Signs of Heat-Related Illness</h3>
+            <p>
+                Recognising symptoms early can prevent heat-related illnesses from becoming more serious.
+            </p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="rounded shadow-sm h-100 overflow-hidden">
+
+                    <div style="height: 250px; width: 100%;">
+                        <img src="media/black exhaustion.png"
+                            class="w-100 h-100"
+                            style="object-fit: cover;">
+                    </div>
+
+                    <div class="p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-exclamation-circle fs-2 me-3 text-warning"></i>
+                            <h4 class="mb-0">Heat Exhaustion</h4>
+                        </div>
+
+                        <p>
+                            Heat exhaustion occurs when the body loses excessive water and salt through sweating.
+                        </p>
+
+                        <p class="fw-bold mb-2">Common symptoms:</p>
+                        <ul>
+                            <li>Heavy sweating</li>
+                            <li>Weakness and dizziness</li>
+                            <li>Headache and nausea</li>
+                            <li>Cold, pale or clammy skin</li>
+                            <li>Fast or weak pulse</li>
+                        </ul>
+
+                        <p class="mb-0">
+                            <strong>What to do:</strong> Move to a cooler place, loosen clothing, cool the body and sip water if the person is fully conscious and able to swallow. Seek medical attention if symptoms worsen or do not improve.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="rounded shadow-sm h-100 overflow-hidden">
+
+                    <div style="height: 250px; width: 100%;">
+                        <img src="media/china die.png"
+                            class="w-100 h-100"
+                            style="object-fit: cover;">
+                    </div>
+
+                    <div class="p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-exclamation-triangle fs-2 me-3 text-danger"></i>
+                            <h4 class="mb-0">Heatstroke</h4>
+                        </div>
+
+                        <p>
+                            Heatstroke is a life-threatening medical emergency in which the body's temperature regulation fails.
+                        </p>
+
+                        <p class="fw-bold mb-2">Warning signs:</p>
+                        <ul>
+                            <li>Confusion or unusual behaviour</li>
+                            <li>Very high body temperature</li>
+                            <li>Seizures or unconsciousness</li>
+                            <li>Hot skin, which may be dry or sweaty</li>
+                            <li>Loss of coordination</li>
+                        </ul>
+
+                        <p class="mb-0">
+                            <strong>What to do:</strong> Call emergency medical services immediately. Begin rapid cooling using cool water, wet cloths or ice packs while waiting for help. Do not give fluids to someone who is confused or unconscious.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider my-5">
+
+    <!-- Community Heat Map -->
+    <section class="mb-5" id="mappies">
+        <div class="text-center mb-4">
+            <p class="eyebrow">Your community matters</p>
+            <h3 class="accent mb-3">Community Heat Map</h3>
+        </div>
+
+        <div class="p-4 rounded shadow-sm text-center">
+            <h5 class="mb-2">Report a Hot Spot in Your Neighbourhood</h5>
+            <p class="text-muted small mb-4">
+                Use the map to identify locations where you have experienced unusually high temperatures.
+            </p>
+
+            <div class="img-placeholder position-relative" style="height: 400px;">
+                <div class="text-danger"
+                    style="font-size: 3rem; position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%);">
+                    <i class="bi bi-geo-alt-fill"></i>
+                </div>
+            </div>
+
+            <p class="text-muted small mt-3 mb-0">
+                Map visualization placeholder. Reported locations should be verified before being treated as measured temperature data.
+            </p>
+        </div>
+    </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="shell">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="font-heading mb-2">Project Solaris</h5>
+                    <p>A website exploring heatwaves, their effects on people and communities, and simple ways to stay safe during extreme heat.</p>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="mb-2">Explore</h5>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About this project</a>
+                    <a href="information.html">Information</a>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <h5 class="mb-2">Learn</h5>
+                    <a href="safety.html">Heat safety</a>
+                    <a href="#">Cooling tips</a>
+                    <a href="#">Water conservation</a>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="mb-2">About</h5>
+                    <a href="about.html">Our project</a>
+                    <a href="#">Our research</a>
+                    <a href="#">Contact us</a>
+                </div>
+            </div>
+            <div class="footer-rule">© 2026 Group 3 TGG Campus Y9 C2</div>
+        </div>
+    </footer>
+
+    <!-- CREATE ACCOUNT MODAL -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Create Account</h5>
+                    <button type="button" class="btn-close"
+                        data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <form id="createAccountForm" novalidate>
+
+                        <div class="mb-3">
+                            <label for="registerEmail" class="form-label">Email</label>
+                            <input type="email" id="registerEmail"
+                                class="form-control" placeholder="Enter your email">
+                            <small id="emailError" class="text-danger"></small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="registerName" class="form-label">Full Name</label>
+                            <input type="text" id="registerName"
+                                class="form-control" placeholder="First and last name">
+                            <small id="nameError" class="text-danger"></small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="registerPassword" class="form-label">Password</label>
+                            <input type="password" id="registerPassword"
+                                class="form-control" placeholder="At least 8 characters">
+                            <small id="passwordError" class="text-danger"></small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">
+                                Reconfirm Password
+                            </label>
+                            <input type="password" id="confirmPassword"
+                                class="form-control" placeholder="Re-enter your password">
+                            <small id="confirmError" class="text-danger"></small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="registerPhone" class="form-label">
+                                Phone Number
+                            </label>
+                            <input type="tel" id="registerPhone"
+                                class="form-control" placeholder="09XXXXXXXXX">
+                            <small id="phoneError" class="text-danger"></small>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100">
+                            Create Account
+                        </button>
+
+                        <p id="registerSuccess" class="text-success mt-3"></p>
+
+                        <p class="auth-switch">Already have an account?
+                            <a href="#" data-switch="loginModal">Log in</a></p>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- LOG IN MODAL -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Log In</h5>
+                    <button type="button" class="btn-close"
+                        data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <form id="loginForm" novalidate>
+
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email</label>
+                            <input type="email" id="loginEmail"
+                                class="form-control" placeholder="Enter your email"
+                                autocomplete="email">
+                            <small id="loginEmailError" class="text-danger"></small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" id="loginPassword"
+                                class="form-control" placeholder="Enter your password"
+                                autocomplete="current-password">
+                            <small id="loginPasswordError" class="text-danger"></small>
+                        </div>
+
+                        <p id="loginError" class="text-danger mb-2"></p>
+
+                        <button type="submit" class="btn btn-primary w-100">
+                            Log In
+                        </button>
+
+                        <p class="auth-switch">Don't have an account?
+                            <a href="#" data-switch="registerModal">Create one</a></p>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

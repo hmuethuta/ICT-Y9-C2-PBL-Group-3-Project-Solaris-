@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore heat-wave news, practical advice, and ways to help protect people from extreme heat.">
+    <title>Learning Heatwaves</title>
+    <link href="bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="icon" href="media/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <header class="top-header" id="topHeader">
+        <div class="shell header-row">
+            <a href="index.html" class="brand-link">
+                <img src="media/logo.png" alt="Project Solaris logo" width="50" height="50">
+                    <span class="brand-name">Project <span class="accent">Solaris</span></span>
+                    <span class="brand-tag">Heat Safety</span>
+                </span>
+            </a>
+
+            <nav class="main-nav">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="about.html">About Us</a>
+                <a class="nav-link active" href="information.html">Information</a>
+                <a class="nav-link" href="safety.html">Staying Safe</a>
+            </nav>
+
+            <div class="header-actions">
+                <button type="button" class="btn-login" id="loginButton"
+                    data-bs-toggle="modal" data-bs-target="#loginModal">
+                    Log In
+                </button>
+                <button type="button" class="btn btn-danger" id="createAccountButton"
+                    data-bs-toggle="modal" data-bs-target="#registerModal">
+                    Create Account
+                </button>
+
+                <!-- Shown instead of the two buttons above when logged in -->
+                <div class="dropdown account-menu" id="accountMenu" hidden>
+                    <button type="button" class="account-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false" aria-label="Your account">
+                        <span class="account-avatar" id="accountAvatar"></span>
+                        <span class="account-name" id="accountName"></span>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-end account-dropdown">
+                        <div class="account-info">
+                            <strong id="accountFull"></strong>
+                            <small id="accountEmail"></small>
+                            <small id="accountQuiz"></small>
+                        </div>
+                        <hr class="dropdown-divider">
+                        <button type="button" class="dropdown-item" id="logoutButton">
+                            <i class="bi bi-box-arrow-right"></i> Log out
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container py-5">
+
+        <!-- Information Center Introduction -->
+        <section class="text-center mx-auto mb-5" style="max-width: 850px;">
+            <p class="eyebrow">Explore the science</p>
+            <h2 class="accent mb-3">Information Center</h2>
+            <p class="lead">
+                Understanding the science behind heatwaves helps us recognise their dangers and make better decisions during extreme temperatures.
+            </p>
+            <p>
+                Heatwaves are more than just periods of hot weather. They involve atmospheric conditions, environmental factors and biological processes that can affect human health, ecosystems and everyday life.
+                Explore the scientific explanations below to learn how extreme heat develops and why it matters.
+            </p>
+        </section>
+
+        <!-- How Heatwaves Form -->
+        <section class="row align-items-center justify-content-center g-4 mb-5" id="#Formation">
+            <div class="col-lg-6 order-lg-1">
+                <img src="media/very very hot.png" alt="" width="auto" height="700" class="img-fluid mb-3" style="border-radius: 20px;">
+            </div>
+
+            <div class="col-lg-6">
+                <div class="p-4">
+                    <p class="eyebrow">Atmospheric science</p>
+                    <h3 class="accent mb-3">How Do Heatwaves Form?</h3>
+                    <p>
+                        Heatwaves often develop when a high-pressure system remains over an area for an extended period.
+                        Air gradually sinks under high pressure, warming as it is compressed.
+                        This can reduce cloud formation and rainfall, allowing more sunlight to reach the Earth's surface.
+                    </p>
+                    <p>
+                        As the ground absorbs solar energy, it heats the surrounding air.
+                        When these conditions persist for several days, temperatures can rise significantly above normal seasonal levels.
+                    </p>
+                    <p>
+                        Other factors, including dry soil, warm ocean conditions and changes in atmospheric circulation, can also contribute to extreme heat events.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider my-5">
+
+        <!-- Temperature and Humidity -->
+        <section class="row align-items-center justify-content-center g-4 mb-5">
+            <div class="col-lg-6 order-lg-2">
+                <div class="img-placeholder"></div>
+            </div>
+
+            <div class="col-lg-6">
+                <img src="media/sunorange.png" alt="" width="auto" height="700" style="border-radius: 20px;"class="img-fluid mb-3">
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="p-4">
+                    <p class="eyebrow">Temperature and moisture</p>
+                    <h3 class="accent mb-3">The Role of Humidity</h3>
+                    <p>
+                        Air temperature does not tell the whole story of how hot the weather feels.
+                        Humidity, which describes the amount of water vapour in the air, also affects how effectively the human body can cool itself.
+                    </p>
+                    <p>
+                        The human body primarily releases excess heat through sweating.
+                        As sweat evaporates from the skin, it removes heat and helps lower body temperature.
+                        However, when humidity is high, sweat evaporates more slowly, making natural cooling less effective.
+                    </p>
+                    <p>
+                        The <strong>Heat Index</strong> combines air temperature and relative humidity to estimate how hot conditions feel to the human body.
+                        This is why a humid day can feel much hotter than a dry day at the same temperature.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider my-5">
+
+        <!-- Scientific FAQ -->
+        <section class="mb-5 mx-auto" style="max-width: 900px;">
+            <div class="text-center mb-4">
+                <p class="eyebrow">Explore the details</p>
+                <h3 class="accent mb-3">Scientific Questions & Answers</h3>
+                <p>
+                    Learn more about the physical processes, environmental conditions and health effects associated with extreme heat.
+                </p>
+            </div>
+
+            <div class="accordion custom-accordion" id="faqAccordion">
+
+                <!-- Question 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            1. What is a heatwave?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            A heatwave is a prolonged period of unusually high temperatures compared with the typical conditions of a particular location and season.
+                            There is no single global temperature threshold for defining a heatwave because normal temperatures vary between climates and regions.
+                            Heatwaves can last several days or longer and may affect large geographical areas.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            2. Why do high-pressure systems cause extreme heat?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            High-pressure systems are associated with sinking air.
+                            As air descends, it becomes compressed and warms.
+                            These systems can also suppress cloud formation and rainfall, allowing more solar radiation to reach the ground.
+                            When a high-pressure system remains in place, these conditions can contribute to a prolonged period of extreme heat.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                            3. What is the difference between heat index and air temperature?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Air temperature measures how hot the surrounding air is, usually in degrees Celsius or Fahrenheit.
+                            The heat index combines air temperature and relative humidity to estimate how hot the conditions feel to people.
+                            Higher humidity reduces the evaporation of sweat, which can make the apparent temperature significantly higher than the measured air temperature.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                            4. How does the human body regulate its temperature?
+                        </button>
+                    </h2>
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            The hypothalamus, a region of the brain, helps regulate the body's internal temperature.
+                            When the body becomes too warm, it triggers processes such as sweating and widening of blood vessels near the skin.
+                            Sweating allows heat to escape through evaporation, while increased blood flow near the skin helps transfer heat to the surroundings.
+                            These cooling mechanisms become less effective under extreme heat and high humidity.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                            5. What is the scientific difference between heat exhaustion and heatstroke?
+                        </button>
+                    </h2>
+                    <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Heat exhaustion occurs when the body loses excessive water and salts through sweating and struggles to cool itself.
+                            Symptoms may include heavy sweating, weakness, dizziness, nausea and headaches.
+
+                            <br><br>
+
+                            Heatstroke is a much more serious condition in which the body's temperature regulation fails.
+                            It can cause confusion, seizures, unconsciousness and damage to vital organs.
+                            Heatstroke is a medical emergency requiring immediate medical assistance and rapid cooling.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                            6. Why are urban areas often hotter than rural areas?
+                        </button>
+                    </h2>
+                    <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Urban areas often experience a phenomenon called the <strong>Urban Heat Island Effect</strong>.
+                            Materials such as concrete, asphalt and brick absorb and store large amounts of solar energy during the day.
+                            Buildings and roads can then release this stored heat slowly, keeping urban areas warmer, particularly at night.
+                            A lack of vegetation also reduces shade and evaporative cooling.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <hr class="section-divider my-5">
+
+        <!-- More Scientific Information -->
+        <section class="text-center mx-auto mb-5" style="max-width: 900px;">
+            <p class="eyebrow">Beyond the basics</p>
+            <h3 class="accent mb-3">More Scientific Information</h3>
+            <p>
+                Extreme heat can affect several systems in the human body.
+                The cardiovascular system must work harder to move blood towards the skin, while excessive sweating can cause the loss of water and electrolytes.
+                Prolonged exposure can also worsen existing cardiovascular and respiratory conditions.
+            </p>
+            <p>
+                Heatwaves can affect the environment as well.
+                High temperatures increase evaporation, contribute to soil moisture loss and place additional stress on plants and agricultural crops.
+                When combined with low rainfall, extreme heat can worsen drought conditions and increase the risk of wildfires.
+            </p>
+
+            <div class="row justify-content-center g-3 mt-4">
+
+                <div class="col-md-4">
+                    <div class="p-4 rounded shadow-sm h-100">
+                        <i class="bi bi-thermometer-high fs-1 accent"></i>
+                        <h5 class="mt-3">Thermoregulation</h5>
+                        <p class="small mb-0">
+                            The biological processes that maintain a relatively stable internal body temperature.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="p-4 rounded shadow-sm h-100">
+                        <i class="bi bi-droplet-half fs-1 accent"></i>
+                        <h5 class="mt-3">Dehydration</h5>
+                        <p class="small mb-0">
+                            A condition that occurs when the body loses more water than it takes in, affecting normal bodily functions.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="p-4 rounded shadow-sm h-100">
+                        <i class="bi bi-tree fs-1 accent"></i>
+                        <h5 class="mt-3">Environmental Stress</h5>
+                        <p class="small mb-0">
+                            Extreme temperatures can damage vegetation, reduce soil moisture and place pressure on ecosystems.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Heat Safety Quiz Banner -->
+        <section class="p-5 text-center" id="quizBanner"
+            style="background-color: var(--warn-yellow); border-radius: 20px;">
+            <p class="eyebrow text-dark">Test your knowledge</p>
+            <h2 class="mb-2 font-heading text-dark">Take the Heat Safety Quiz</h2>
+            <p class="text-dark mb-4">
+                Think you've learned enough about extreme heat?
+                Test your knowledge with our interactive quiz.
+            </p>
+            <p class="text-dark fw-bold small">
+                Login required to save your results.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="shell">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="font-heading mb-2">Project Solaris</h5>
+                    <p>A website exploring heatwaves, their effects on people and communities, and simple ways to stay safe during extreme heat.</p>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="mb-2">Explore</h5>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About this project</a>
+                    <a href="information.html">Information</a>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <h5 class="mb-2">Learn</h5>
+                    <a href="safety.html">Heat safety</a>
+                    <a href="#">Cooling tips</a>
+                    <a href="#">Water conservation</a>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="mb-2">About</h5>
+                    <a href="about.html">Our project</a>
+                    <a href="#">Our research</a>
+                    <a href="#">Contact us</a>
+                </div>
+            </div>
+            <div class="footer-rule">© 2026 Group 3 TGG Campus Y9 C2</div>
+        </div>
+    </footer>
+
+    <!-- CREATE ACCOUNT MODAL -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Create Account</h5>
+                    <button type="button" class="btn-close"
+                        data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <form id="createAccountForm" novalidate>
+
+                        <div class="mb-3">
+                            <label for="registerEmail" class="form-label">Email</label>
+                            <input type="email" id="registerEmail"
+                                class="form-control" placeholder="Enter your email">
+                            <small id="emailError" class="text-danger"></small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="registerName" class="form-label">Full Name</label>
+                            <input type="text" id="registerName"
+                                class="form-control" placeholder="First and last name">
+                            <small id="nameError" class="text-danger"></small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="registerPassword" class="form-label">Password</label>
+                            <input type="password" id="registerPassword"
+                                class="form-control" placeholder="At least 8 characters">
+                            <small id="passwordError" class="text-danger"></small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">
+                                Reconfirm Password
+                            </label>
+                            <input type="password" id="confirmPassword"
+                                class="form-control" placeholder="Re-enter your password">
+                            <small id="confirmError" class="text-danger"></small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="registerPhone" class="form-label">
+                                Phone Number
+                            </label>
+                            <input type="tel" id="registerPhone"
+                                class="form-control" placeholder="09XXXXXXXXX">
+                            <small id="phoneError" class="text-danger"></small>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100">
+                            Create Account
+                        </button>
+
+                        <p id="registerSuccess" class="text-success mt-3"></p>
+
+                        <p class="auth-switch">Already have an account?
+                            <a href="#" data-switch="loginModal">Log in</a></p>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- LOG IN MODAL -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Log In</h5>
+                    <button type="button" class="btn-close"
+                        data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <form id="loginForm" novalidate>
+
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email</label>
+                            <input type="email" id="loginEmail"
+                                class="form-control" placeholder="Enter your email"
+                                autocomplete="email">
+                            <small id="loginEmailError" class="text-danger"></small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" id="loginPassword"
+                                class="form-control" placeholder="Enter your password"
+                                autocomplete="current-password">
+                            <small id="loginPasswordError" class="text-danger"></small>
+                        </div>
+
+                        <p id="loginError" class="text-danger mb-2"></p>
+
+                        <button type="submit" class="btn btn-primary w-100">
+                            Log In
+                        </button>
+
+                        <p class="auth-switch">Don't have an account?
+                            <a href="#" data-switch="registerModal">Create one</a></p>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
